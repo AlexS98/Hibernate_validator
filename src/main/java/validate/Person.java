@@ -4,7 +4,7 @@ import javax.validation.constraints.*;
 
 public class Person {
     @NotNull(message = "Не указан возраст")
-    @PositiveOrZero(message = "(> | =) 0")
+    @Min(value = 0, message = "(> | =) 0")
     @Max(value = 120, message = "Не больше 120!")
     int age;
 

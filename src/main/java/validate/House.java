@@ -12,18 +12,18 @@ public class House {
     public int height;
 
     @NotNull(message = "Не указана дата сдачи в эксплуатацию")
-    @PastOrPresent(message = "Укажите реальную дату")
+    @Past(message = "Укажите реальную дату")
     public Date dateOfBuild;
 
     @NotNull(message = "Не указан подрядчик")
     public Contractor contractor;
 
     @NotNull(message = "Не указана площадь, занимаемаемая домом")
-    @Positive(message = "Укажите реальную площадь")
+    @Min(value = 1, message = "Укажите реальную площадь")
     public double area;
 
     @NotNull(message = "Не указана площадь, занимаемаемая домом")
-    public List<@Valid Person> dwellers;
+    public List<Person> dwellers;
 
     @Valid public Person architect;
 
