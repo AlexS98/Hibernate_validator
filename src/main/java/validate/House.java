@@ -23,14 +23,17 @@ public class House {
     public double area;
 
     @NotNull(message = "Не указана площадь, занимаемаемая домом")
-    public List<Person> dwellers;
+    public List<@Valid Person> dwellers;
 
-    @Valid Person architect;
+    @Valid public Person architect;
 
     @NotNull(message = "Не задано кол-во квартир")
     @Min(value = 1,message = "Не меньше 1")
     @Max(value = 1000, message = "Не больше 1000")
     int flatsCount;
+
+    public House(){
+    }
 
     public House(int height, Date dateOfBuild, Contractor contractor, double area, List<Person> dwellers, Person architect, int flatsCount){
         this.contractor = contractor;
@@ -42,4 +45,20 @@ public class House {
         this.height = height;
     }
 
+    @Override
+    public String toString(){
+        return "contractor: " + contractor + "; architect: " +
+                architect.toString() + "; area: " + area +
+                ";\ndateOfBuild: " + dateOfBuild.toString() +
+                "; flatsCount: " + flatsCount + "; height: " + height + "\n";
+    }
+
+    public String showDwellers(){
+        String result = "";
+        for (Person person:
+             dwellers) {
+            result += person.toString() + "\n";
+        }
+        return result;
+    }
 }

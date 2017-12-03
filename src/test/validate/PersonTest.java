@@ -16,7 +16,7 @@ public class PersonTest {
     private static Validator validator;
 
     @BeforeClass
-    public static void setUp() {
+    public static void initValidator() {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         validator = factory.getValidator();
     }
@@ -25,6 +25,7 @@ public class PersonTest {
     public void nameIsNull() {
         Person person = new Person( null, "Smith", 40 );
         Set<ConstraintViolation<Person>> constraintViolations = validator.validate(person);
+        assertEquals(person.getName(), null);
         assertEquals( 1, constraintViolations.size() );
         assertEquals(
                 "Не указано имя",
@@ -46,11 +47,11 @@ public class PersonTest {
 
     @Test
     public void ageLessZero() {
-        Person car = new Person( "Bob", "Alonso", -1 );
+        Person person = new Person( "Bob", "Alonso", -20 );
 
         Set<ConstraintViolation<Person>> constraintViolations =
-                validator.validate( car );
-
+                validator.validate( person );
+        assertEquals(person.getAge(), -20);
         assertEquals( 1, constraintViolations.size() );
         assertEquals(
                 "(> | =) 0",
@@ -63,6 +64,13 @@ public class PersonTest {
         Person person = new Person( "Morris", "Smith", 20 );
         Set<ConstraintViolation<Person>> constraintViolations =
                 validator.validate( person );
+        assertEquals(person.getLastName(), "Smith");
         assertEquals( 0, constraintViolations.size() );
+    }
+
+    @Test
+    public void stringTest(){
+        Person person = new Person( "Morris", "Smith", 20 );
+        assertEquals(person.toString(), "[name: Morris, last name: Smith, age: 20]");
     }
 }

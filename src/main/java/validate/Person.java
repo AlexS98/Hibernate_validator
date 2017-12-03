@@ -45,4 +45,9 @@ public class Person {
         setLastName(lastName);
         setAge(age);
     }
+
+    @Override
+    public String toString(){
+        return "[name: " + name + ", last name: " + lastName + ", age: " + age + "]";
+    }
 }
