@@ -75,9 +75,24 @@ public class HouseTest {
     }
 
     @Test
+    public void emptyHouse() {
+        House house = new House();
+        Set<ConstraintViolation<House>> constraintViolations = validator.validate(house);
+        assertEquals(6, constraintViolations.size());
+    }
+
+    @Test
     public void stringTest(){
         assertEquals(myHouse.toString().substring(0, myHouse.toString().indexOf('T')),
                 "contractor: BudAlliance; architect: [name: Adam, last name: Smith, age: 40]; area: 1532.2;\n" +
                         "dateOfBuild: ");
+    }
+
+    @Test
+    public void showDwellersTest(){
+        assertEquals(myHouse.showDwellers(),
+                "[name: Adam, last name: Smith, age: 40]\n" +
+                        "[name: Ann, last name: Luis, age: 25]\n" +
+                        "[name: Kate, last name: Lux, age: 25]\n");
     }
 }

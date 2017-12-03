@@ -41,8 +41,8 @@
       <file leaf-file-name="HouseTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/validate/HouseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="78" column="53" lean-forward="false" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
+            <state relative-caret-position="327">
+              <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -615,7 +615,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HouseTest.stringTest">
+  <component name="RunManager" selected="JUnit.HouseTest.showDwellersTest">
     <configuration name="HouseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -630,6 +630,56 @@
       <option name="MAIN_CLASS_NAME" value="validate.HouseTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="HouseTest.emptyHouse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="validate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Lab_7_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="validate" />
+      <option name="MAIN_CLASS_NAME" value="validate.HouseTest" />
+      <option name="METHOD_NAME" value="emptyHouse" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="HouseTest.showDwellersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="validate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Lab_7_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="validate" />
+      <option name="MAIN_CLASS_NAME" value="validate.HouseTest" />
+      <option name="METHOD_NAME" value="showDwellersTest" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -665,25 +715,6 @@
       </option>
       <envs />
       <patterns />
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Lab_7_main" />
-      <envs />
     </configuration>
     <configuration name="PersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -791,28 +822,20 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="build (1)" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="Lab_7" />
-      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HouseTest" />
-      <item index="2" class="java.lang.String" itemvalue="Groovy.build (1)" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.PersonTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.HouseTest.stringTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.HouseTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PersonTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.HouseTest.stringTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.HouseTest.emptyHouse" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.HouseTest.showDwellersTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HouseTest.stringTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PersonTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HouseTest" />
-        <item index="3" class="java.lang.String" itemvalue="Groovy.build (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HouseTest.showDwellersTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HouseTest.emptyHouse" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HouseTest.stringTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PersonTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.HouseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -833,17 +856,17 @@
     <history-entry file="HouseTest - 2017.12.04 at 01h 29m 53s.xml">
       <configuration name="HouseTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HouseTest_stringTest - 2017.12.04 at 00h 55m 38s.xml">
-      <configuration name="HouseTest.stringTest" configurationId="JUnit" />
+    <history-entry file="HouseTest_emptyHouse - 2017.12.04 at 01h 43m 24s.xml">
+      <configuration name="HouseTest.emptyHouse" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HouseTest_stringTest - 2017.12.04 at 00h 56m 59s.xml">
-      <configuration name="HouseTest.stringTest" configurationId="JUnit" />
+    <history-entry file="HouseTest_emptyHouse - 2017.12.04 at 01h 43m 39s.xml">
+      <configuration name="HouseTest.emptyHouse" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HouseTest_stringTest - 2017.12.04 at 00h 58m 55s.xml">
-      <configuration name="HouseTest.stringTest" configurationId="JUnit" />
+    <history-entry file="HouseTest_showDwellersTest - 2017.12.04 at 01h 44m 49s.xml">
+      <configuration name="HouseTest.showDwellersTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HouseTest_stringTest - 2017.12.04 at 00h 59m 12s.xml">
-      <configuration name="HouseTest.stringTest" configurationId="JUnit" />
+    <history-entry file="HouseTest_showDwellersTest - 2017.12.04 at 01h 46m 43s.xml">
+      <configuration name="HouseTest.showDwellersTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="HouseTest_stringTest - 2017.12.04 at 01h 34m 15s.xml">
       <configuration name="HouseTest.stringTest" configurationId="JUnit" />
@@ -1108,8 +1131,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/validate/HouseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="78" column="53" lean-forward="false" selection-start-line="78" selection-start-column="53" selection-end-line="78" selection-end-column="53" />
+        <state relative-caret-position="327">
+          <caret line="95" column="24" lean-forward="false" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
