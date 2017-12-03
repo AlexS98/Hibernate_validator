@@ -1,0 +1,68 @@
+package validate;
+
+import java.util.Set;
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+
+public class PersonTest {
+    private static Validator validator;
+
+    @BeforeClass
+    public static void setUp() {
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        validator = factory.getValidator();
+    }
+
+    @Test
+    public void nameIsNull() {
+        Person person = new Person( null, "Smith", 40 );
+        Set<ConstraintViolation<Person>> constraintViolations = validator.validate(person);
+        assertEquals( 1, constraintViolations.size() );
+        assertEquals(
+                "Не указано имя",
+                constraintViolations.iterator().next().getMessage()
+        );
+    }
+
+    @Test
+    public void lastNameTooShort() {
+        Person person = new Person( "Marry", "To", 15 );
+        Set<ConstraintViolation<Person>> constraintViolations =
+                validator.validate( person );
+        assertEquals( 1, constraintViolations.size() );
+        assertEquals(
+                "Длина фамилии должна быть больше 3 и меньше 20 символов",
+                constraintViolations.iterator().next().getMessage()
+        );
+    }
+
+    @Test
+    public void ageLessZero() {
+        Person car = new Person( "Bob", "Alonso", -1 );
+
+        Set<ConstraintViolation<Person>> constraintViolations =
+                validator.validate( car );
+
+        assertEquals( 1, constraintViolations.size() );
+        assertEquals(
+                "(> | =) 0",
+                constraintViolations.iterator().next().getMessage()
+        );
+    }
+
+    @Test
+    public void validPersonData() {
+        Person person = new Person( "Morris", "Smith", 20 );
+        Set<ConstraintViolation<Person>> constraintViolations =
+                validator.validate( person );
+        assertEquals( 0, constraintViolations.size() );
+    }
+}
